@@ -26,7 +26,7 @@
             <div class="header navigation-bar d-flex justify-content-between align-items-center">
                 <div class="logo">
                     <a href="index.php" class="link d-block">
-                        <img src="images/fd-logo-final-1.svg" alt="logo" width="130" height="35.8">
+                        <img src="images/logo.svg" alt="logo" width="130" height="35.8">
                     </a>
                 </div>
                 <ul class="centered-nav d-flex align-items-center gap-lg-5 gap-md-4 gap-3 mb-0 ps-0 py-1 py-md-0 justify-content-md-center justify-content-around">
