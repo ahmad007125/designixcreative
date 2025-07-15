@@ -36,7 +36,7 @@
             <div class="header navigation-bar d-flex justify-content-between align-items-center">
                 <div class="logo">
                     <a href="index.php" class="link d-block">
-                        <img src="images/fd-logo-final-1.svg" alt="logo" width="130" height="35.8">
+                        <img src="images/logo.svg" alt="logo" width="130" height="35.8">
                     </a>
                 </div>
                 <ul class="centered-nav d-flex align-items-center gap-lg-5 gap-md-4 gap-3 mb-0 ps-0 py-1 py-md-0 justify-content-md-center justify-content-around">
@@ -367,15 +367,8 @@
                 <p class="font-sm text-white fw-300">Discover insightful articles on design trends, tutorials, and creative inspiration. Stay updated with the latest in the world of design!</p>
             </div>
 
-            <div class="swiper-container">
-                <div class="swiper-wrapper"></div>
-
-                <!-- Optional navigation -->
-                <!-- <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div> -->
-                <!-- Optional pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
+            <!-- Container for blog posts on the homepage -->
+            <div id="home-blog-list" class="swiper-wrapper"></div>
         </div>
     </div>
 
