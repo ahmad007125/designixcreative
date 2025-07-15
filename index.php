@@ -367,15 +367,8 @@
                 <p class="font-sm text-white fw-300">Discover insightful articles on design trends, tutorials, and creative inspiration. Stay updated with the latest in the world of design!</p>
             </div>
 
-            <div class="swiper-container">
-                <div class="swiper-wrapper"></div>
-
-                <!-- Optional navigation -->
-                <!-- <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div> -->
-                <!-- Optional pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
+            <!-- Container for blog posts on the homepage -->
+            <div id="home-blog-list" class="swiper-wrapper"></div>
         </div>
     </div>
 

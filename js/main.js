@@ -197,9 +197,17 @@ function loadSinglePost() {
 
 // Function to show random posts on the homepage
 function showRandomPosts(count) {
-    const blogContainer = document.querySelector('.home-blog-container .swiper-wrapper');
-    const shuffledPosts = postFiles.sort(() => 0.5 - Math.random()); // Shuffle posts
-    const selectedPosts = shuffledPosts.slice(0, count); // Get 5 random posts
+    // 1. SELECT the new container by its ID
+    const blogContainer = document.getElementById('home-blog-list');
+
+    // It's good practice to check if the container exists
+    if (!blogContainer) {
+        console.error("Error: The container #home-blog-list was not found on the page.");
+        return;
+    }
+
+    const shuffledPosts = postFiles.sort(() => 0.5 - Math.random());
+    const selectedPosts = shuffledPosts.slice(0, count);
 
     // Clear current content
     blogContainer.innerHTML = '';
@@ -214,7 +222,8 @@ function showRandomPosts(count) {
                 if (postElement) {
                     const mainBlogCard = postElement.querySelector('.main-blog-card');
                     if (mainBlogCard) {
-                        blogContainer.innerHTML += `<div class="swiper-slide">${mainBlogCard.outerHTML}</div>`;
+                        // 2. APPEND the card's HTML directly, without the swiper-slide div
+                        blogContainer.innerHTML += mainBlogCard.outerHTML;
                     } else {
                         console.error('Error: .main-blog-card element not found in the post!');
                     }
