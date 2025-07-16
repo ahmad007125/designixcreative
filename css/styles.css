@@ -161,6 +161,9 @@ h1, h2, h3, h4, h5, h6 {
   .blog-page .call-container, .resume-page .call-container {
     margin-top: 40px !important;
   }
+  .custom-slider .main-blog-card {
+    min-width: 40%;
+  }
 }
 
 @media screen and (max-width: 766px) {
@@ -216,6 +219,9 @@ h1, h2, h3, h4, h5, h6 {
   .category-bubble {
     padding: 7px 14px;
     margin: 2px;
+  }
+  .custom-slider .main-blog-card {
+    min-width: 80% !important;
   }
 }
 
@@ -570,6 +576,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .main-blog-card {
   border-radius: 20px !important;
+  min-width: 216px;
 }
 .main-blog .card-img-top {
   aspect-ratio: 3 / 2;
@@ -857,4 +864,28 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
 
 .resume-container .contact-section h3, .resume-container .contact-section p {
   margin: 0;
+}
+.custom-slider .main-blog-card {
+  min-width: 30%;
+}
+.custom-slider {
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+/* WebKit-based browsers (Chrome, Edge, Safari) */
+.custom-slider::-webkit-scrollbar {
+  height: 7px;
+}
+.custom-slider::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+.custom-slider::-webkit-scrollbar-thumb {
+  background-color: #59C174;
+  border-radius: 10px;
+  transition: 0.3s ease all;
+  cursor: pointer;
+}
+.custom-slider::-webkit-scrollbar-thumb:hover {
+  background-color: #399752;
 }

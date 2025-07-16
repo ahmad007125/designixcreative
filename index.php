@@ -12,7 +12,8 @@
 
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/styles_hidden.css">
+    <!-- <link rel="stylesheet" href="css/styles_hidden.css"> -->
+    <link rel="stylesheet" href="css/styles.css?v=<?=time()?>">
 
     <!-- Preload Google Fonts -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -368,7 +369,9 @@
             </div>
 
             <!-- Container for blog posts on the homepage -->
-            <div id="home-blog-list" class="swiper-wrapper"></div>
+            <div class="custom-slider w-100">
+                <div id="home-blog-list" class="swiper-wrapper d-flex gap-4"></div>
+            </div>
         </div>
     </div>
 
@@ -408,63 +411,13 @@
     <!-- Bootstrap JS (includes Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 
     <!-- Woow animtaion -->
     <!-- <script src="plugins/counterup/wow.min.js"></script> -->
     <!-- <script src="plugins/counterup/jquery.easing.1.3.js"></script> -->
     <!-- <script src="plugins/jquery/contact.js"></script> -->
     <script src="js/main.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // const numberOfSlides = document.querySelectorAll('.swiper-slide').length;
-            setTimeout(function() {
-                const swiper = new Swiper('.swiper-container', {
-                    // Optional parameters
-                    direction: 'horizontal',
-                    loop: true,    
-                    spaceBetween: 20,
-                    slidesPerView: 4,
-                    freeModeSticky: true,  
-                    speed: '600',
-                    // freeMode: true, 
-                    // If you want navigation arrows
-                    // navigation: {
-                    //     nextEl: '.swiper-button-next',
-                    //     prevEl: '.swiper-button-prev',
-                    // },
-                    // If you want pagination (bullets)
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    // autoplay: false,
-                    autoplay: {
-                        delay: 5000,
-                        disableOnInteraction: false,  // Autoplay won't stop after interaction
-                    },
-                    effect: 'slide', // or 'fade', 'cube', 'coverflow'
-                     // Responsive breakpoints
-                    breakpoints: {
-                        // when window width is >= 1200px
-                        1200: {
-                            slidesPerView: 4,
-                        },
-                        768: {
-                            slidesPerView: 3,
-                        },
-                        480: {
-                            slidesPerView: 2,
-                        },
-                        0: {
-                            slidesPerView: 1.2,
-                        }
-                    }
-                });
-            }, 100 );
-        });
-    </script>
 
 </body>
 </html>
